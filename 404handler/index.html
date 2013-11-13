@@ -73,9 +73,11 @@
 
       // Perform a search using Swiftype's JSONP API and call renderAutomaticResults when it finishes.
       // Replace the engine_key with your own; the one searches the Swiftype documentation.
-      var searchParams = {engineKey: "pWPnnyvwcfpcrw1o51Sz",
+      var searchParams = {engine_key: "pWPnnyvwcfpcrw1o51Sz",
                           q: getKeywordsFromPath(),
                           per_page: 10}
+
+      $("#st-search-input").val( searchParams.q );
 
       $.getJSON("http://api.swiftype.com/api/v1/public/engines/search.json?callback=?",
                 searchParams).success(renderAutomaticResults);
