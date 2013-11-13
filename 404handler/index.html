@@ -122,9 +122,10 @@
 
       // Return a string made up of text from the path components, splitting on "/", "-", and "_"
       // Skip the first two elements since on ReadTheDocs these are /language/version/.
-      // For example, a path like "/foo/bar/123-the-best_thing_ever" will return "123 the best thing ever"
+      // For example, a path like "/foo/bar/123-the-best_thing/#ever" will return "123 the best thing ever"
       function getKeywordsFromPath() {
-        return window.location.pathname.split(/[\/-_]/).slice(3).join(" ")
+        var url=window.location.pathname + window.location.hash;
+        return url.split(/[\/-_#]/).slice(3).join(" ")
       }
 
       // Loop over the search results and append each one to the st-results-container div.
