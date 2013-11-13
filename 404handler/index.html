@@ -5,6 +5,14 @@
     <!-- Default Swiftype CSS styles. Download these and put them into your application. -->
     <link type="text/css" rel="stylesheet" href="/404handler/css/search.css" media="all" />
     <link type="text/css" rel="stylesheet" href="/404handler/css/autocomplete.css" media="all" />
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/badge_only.css" type="text/css" />
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+    <link rel="stylesheet" href="http://docs.docker.io/en/latest/_static/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="http://docs.docker.io/en/latest/_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="http://docs.docker.io/en/latest/_static/css/main.css" type="text/css" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="//fonts.googleapis.com/css?family=Cabin:400,700,400italic"></script>
+    <link rel="shortcut icon" href="http://docs.docker.io/en/latest/_static/favicon.png"/>
     <style>
       body {
         width: 800px;
@@ -15,18 +23,82 @@
       #st-search-input {
          font-size: 20px;
          width: 600px;
+         height: 30px;
       }
     </style>
+
+    <!-- RTD Analytics Code -->
+    <!-- Included in the header because you don't have a footer block. -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17997319-1']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <!-- end RTD Analytics Code -->
+    
+    
+    <!-- User Analytics Code -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-6096819-11']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <!-- End User Analytics Code -->
+    
+    <!-- end RTD <extrahead> -->
   </head>
   <body>
-    <h1>Oops, page not found.</h1>
-    <form>
-      <input type="text" id="st-search-input" placeholder="Search to find the page you're looking for...">
-    </form>
+    <div id="wrap">
+      <div class="navbar navbar-static-top navbar-inner navbar-fixed-top ">
+	<div class="navbar-dotcloud">
+          <div class="container">
+	    
+            <div style="float: right" class="pull-right">
+              <ul class="nav">
+                <li id="nav-introduction"><a href="http://www.docker.io/" title="Docker Homepage">Home</a></li>
+                <li id="nav-about"><a href="http://www.docker.io/about/" title="About">About</a></li>
+                <li id="nav-gettingstarted"><a href="http://www.docker.io/gettingstarted/">Getting started</a></li>
+                <li id="nav-community"><a href="http://www.docker.io/community/" title="Community">Community</a></li>
+                <li id="nav-documentation" class="active"><a href="http://docs.docker.io/en/latest/">Documentation</a></li>
+                <li id="nav-blog"><a href="http://blog.docker.io/" title="Docker Blog">Blog</a></li>
+                <li id="nav-index"><a href="http://index.docker.io/" title="Docker Image Index, find images here">INDEX <img class="inline-icon" alt="link to external site" src="http://docs.docker.io/en/latest/_static/img/external-link-icon.png" title="external link"> </a></li>
+              </ul>
+            </div>
+	    
+            <div class="brand-logo">
+              <a href="http://www.docker.io" title="Docker Homepage"><img src="http://docs.docker.io/en/latest/_static/img/docker-top-logo.png" alt="Docker logo"></a>
+            </div>
+          </div>
+	</div>
+    </div>
 
+<!-- add some padding to the top to drop it below the navbar -->
+<div class="span9 main-content" style="padding-top: 50px;">
+  <section id="global" class="containerblock">
+    <div class="section" id="pagenotfound">
+      <h1>Oops, page not found.</h1>
+      <form>
+	<input type="text" id="st-search-input" placeholder="Search to find the page you're looking for...">
+      </form>
+    </div>
+    
     <div id="st-results-container"></div>
-
+    
     <p style="margin-top: 50px"><a href="/">Return to home page</a></p>
+  </section>
+</div>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Swiftype JavaScript libraries. Download these and put them into your application. -->
