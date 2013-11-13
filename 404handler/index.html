@@ -1,4 +1,5 @@
 <html>
+  <!-- based on https://swiftype.com/documentation/tutorials/smart_404_page -->
   <head>
     <title>404 Not Found</title>
     <!-- Default Swiftype CSS styles. Download these and put them into your application. -->
@@ -37,12 +38,14 @@
       // Configure full-text search
       $("#st-search-input").swiftypeSearch({
         resultContainingElement: "#st-results-container",
+        functionalBoosts: { "page" : { "popularity": "linear" }},
         engineKey: "pWPnnyvwcfpcrw1o51Sz"
       });
 
       // Configure autocomplete
       $("#st-search-input").swiftype({
-        engineKey: "pWPnnyvwcfpcrw1o51Sz"
+        engineKey: "pWPnnyvwcfpcrw1o51Sz",
+        functionalBoosts: { "page" : { "popularity": "linear" }}
       });
 
       // Return a string made up of text from the path components, splitting on "/", "-", and "_"
@@ -75,6 +78,7 @@
       // Replace the engine_key with your own; the one searches the Swiftype documentation.
       var searchParams = {engine_key: "pWPnnyvwcfpcrw1o51Sz",
                           q: getKeywordsFromPath(),
+                          functional_boosts: {"page": { "popularity": "exponential" }},
                           per_page: 10}
 
       $("#st-search-input").val( searchParams.q );
