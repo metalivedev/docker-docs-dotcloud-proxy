@@ -85,10 +85,10 @@
     </div>
 
 <!-- add some padding to the top to drop it below the navbar -->
-<div class="span9 main-content" style="padding-top: 50px;">
+<div class="main-content" style="padding-top: 50px;">
   <section id="global" class="containerblock">
     <div class="section" id="pagenotfound">
-      <h1>Oops, page not found.</h1>
+      <h1>Sorry, page not found.</h1>
       <form>
 	<input type="text" id="st-search-input" placeholder="Search to find the page you're looking for...">
       </form>
@@ -125,7 +125,7 @@
       // For example, a path like "/foo/bar/123-the-best_thing/#ever" will return "123 the best thing ever"
       function getKeywordsFromPath() {
         var url=window.location.pathname + window.location.hash;
-        return url.split(/[\/-_#]/).slice(3).join(" ")
+        return url.split(/[\/\-_#]/).slice(3).join(" ")
       }
 
       // Loop over the search results and append each one to the st-results-container div.
